@@ -1,0 +1,29 @@
+FE: Component SideBar
+
+Socket:
+connect(userEmail: string, password: string) {
+    const imap = new Imap({
+      user: userEmail,
+      password: password,
+      host: 'localhost',
+      port: 993,
+      tls: false,
+      tlsOptions: { rejectUnauthorized: false },
+    });
+
+tls: false là sao? nếu là true thì tại sao websocket loi?
+
+Bug: Người dung khong gui file ma chi gui ND
+getOriginalFilename và return: học lạiở InboxPage.jsx dòng 33
+
+
+return mails
+      .filter(Boolean)
+      .sort((a, b) => (b.date?.getTime?.() || 0) - (a.date?.getTime?.() || 0));
+
+Tại sao nếu bỏ vào depends trong useEffect() de lay dl 10 -> 19 InboxPage.jsx
+
+Download file nếu có link? Có cần xác thực không?
+
+Mai nốt callback, và dockerCI CD
+

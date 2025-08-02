@@ -1,0 +1,62 @@
+.searchbar-container {
+  margin-bottom: 16px;
+}
+
+.search-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.search-form input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.search-form button {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+}
+
+.search-form .filter-toggle {
+  background: #28a745;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-panel {
+  margin-top: 12px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-panel input[type="text"],
+.filter-panel input[type="date"] {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.date-range {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

@@ -1,0 +1,78 @@
+services:
+  frontend:
+    build: ./WebServer_FE/sendmail_fe
+    container_name: fe
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    build: ./WebServer_NestJS/webserver_sendmail
+    container_name: be
+    ports:
+      - "3000:3000"
+    env_file:
+    - ./WebServer_NestJS/webserver_sendmail/.env.docker
+    depends_on:
+      - mysql
+      - mailserver
+    volumes:
+      - ./WebServer_NestJS/webserver_sendmail/uploads:/app/uploads
+      - ./backend-log:/app/logs
+    networks:
+      - app-network
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: hunghy17
+      MYSQL_DATABASE: mailserver
+      MYSQL_USER: hung
+      MYSQL_PASSWORD: hunghy17
+      PMA_HOST: mysql
+      PMA_USER: pma
+      PMA_PASSWORD: hunghy17
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-init:/docker-entrypoint-initdb.d
+      - ./mysql-data:/var/lib/mysql
+    networks:
+      - app-network
+
+  mailserver:
+    build: ./mailserver  
+    container_name: mailserver
+    restart: always
+    depends_on:
+      - mysql
+    ports:
+      - "25:25"
+      - "143:143"
+      - "587:587"
+      - "993:993"
+    volumes:
+      - ./mailserver/postfix/main.cf:/etc/postfix/main.cf
+      - ./mailserver/postfix/master.cf:/etc/postfix/master.cf
+      - ./mailserver/dovecot:/etc/dovecot
+      - mail_data:/var/mail
+      - ./mailserver/postfix/mysql-sender-login-maps.cf:/etc/postfix/mysql-sender-login-maps.cf
+      - ./mailserver/postfix/mysql-virtual-mailbox-domains.cf:/etc/postfix/mysql-virtual-mailbox-domains.cf
+      - ./mailserver/postfix/mysql-virtual-users.cf:/etc/postfix/mysql-virtual-users.cf
+      - ./mailserver/logs:/var/log
+    networks:
+      - app-network
+
+volumes:
+  mysql_data:
+  mail_data:
+  mail_state:
+
+networks:
+  app-network:
+    driver: bridge

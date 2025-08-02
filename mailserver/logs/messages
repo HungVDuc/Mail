@@ -1,0 +1,15 @@
+Aug  2 02:16:09 eff0dffd76cb rsyslogd: [origin software="rsyslogd" swVersion="8.2102.0" x-pid="16" x-info="https://www.rsyslog.com"] start
+Aug  2 02:21:20 e11319003398 rsyslogd: [origin software="rsyslogd" swVersion="8.2102.0" x-pid="16" x-info="https://www.rsyslog.com"] start
+Aug  2 02:28:02 dcb0f1904c53 rsyslogd: [origin software="rsyslogd" swVersion="8.2102.0" x-pid="16" x-info="https://www.rsyslog.com"] start
+Aug  2 02:33:06 c46b66e1f712 rsyslogd: [origin software="rsyslogd" swVersion="8.2102.0" x-pid="16" x-info="https://www.rsyslog.com"] start
+Aug  2 02:35:49 806fd71a0954 rsyslogd: [origin software="rsyslogd" swVersion="8.2102.0" x-pid="16" x-info="https://www.rsyslog.com"] start
+Aug  2 02:39:08 61b168cdeefa rsyslogd: [origin software="rsyslogd" swVersion="8.2102.0" x-pid="16" x-info="https://www.rsyslog.com"] start
+Aug  2 02:46:49 cdf179e744cc rsyslogd: [origin software="rsyslogd" swVersion="8.2102.0" x-pid="16" x-info="https://www.rsyslog.com"] start
+Aug  2 03:05:55 2d31b2fc5a57 rsyslogd: [origin software="rsyslogd" swVersion="8.2102.0" x-pid="16" x-info="https://www.rsyslog.com"] start
+Aug  2 03:11:43 d0e2d1011b90 rsyslogd: [origin software="rsyslogd" swVersion="8.2102.0" x-pid="16" x-info="https://www.rsyslog.com"] start
+Aug  2 03:18:23 ac681463771e rsyslogd: [origin software="rsyslogd" swVersion="8.2102.0" x-pid="16" x-info="https://www.rsyslog.com"] start
+Aug  2 04:03:20 5dc4a53e9be6 rsyslogd: [origin software="rsyslogd" swVersion="8.2102.0" x-pid="16" x-info="https://www.rsyslog.com"] start
+Aug  2 04:04:14 ae064c8ad1a0 rsyslogd: [origin software="rsyslogd" swVersion="8.2102.0" x-pid="16" x-info="https://www.rsyslog.com"] start
+Aug  2 04:15:22 6ac9b2d8ebc3 rsyslogd: [origin software="rsyslogd" swVersion="8.2102.0" x-pid="16" x-info="https://www.rsyslog.com"] start
+Aug  2 04:18:57 13d929584ba0 rsyslogd: [origin software="rsyslogd" swVersion="8.2102.0" x-pid="16" x-info="https://www.rsyslog.com"] start
+Aug  2 04:21:13 131f2c4035d2 rsyslogd: [origin software="rsyslogd" swVersion="8.2102.0" x-pid="16" x-info="https://www.rsyslog.com"] start

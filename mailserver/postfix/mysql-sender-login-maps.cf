@@ -1,0 +1,5 @@
+user = hung
+password = hunghy17
+hosts = mysql
+dbname = mailserver
+query = SELECT email FROM virtual_users WHERE email='%s'

@@ -1,0 +1,73 @@
+docker-compose up -d
+docker-compose down -v
+
+# Xem logs
+docker-compose logs -f backend
+
+# Xoá tài khoản trong MailServer
+docker exec mailserver setup email del user@example.com   (Dev)
+docker exec mail setup email del user@example.com   (Prod)
+
+npx tsx send-mail.ts
+
+
+
+npx nest g controller auth
+
+
+
+test:
+nguyenvana@gmai.com
+
+nguyenvanb@gmai.com
+
+
+123456
+
+# Build lại
+docker-compose down --volumes --remove-orphans
+docker-compose up --build
+
+# truy cập Back-end
+docker exec -it be ash
+ls -lh /app/uploads
+
+(Xoá file): rm -rf ./webserver_sendmail/uploads/*
+
+# truy cập Database
+docker exec -it mysql mysql -uroot -p
+USE sendmail_db;  
+SELECT * FROM user;
+
+
+# Ubuntu
+sudo service mysql start
+sudo service mysql status
+sudo service mysql stop
+mysql -u hung -p
+
+
+sudo systemctl restart postfix
+sudo systemctl restart dovecot
+
+ sudo tail -f /var/log/mail.log
+
+swaks   --to user9@local.test   --from user1@local.test   --server 127.0.0.1:587   --auth LOGIN   --auth-user user1@local.test   --auth-password password123   --tls   --header "Subject: Test email from swaks"   --body "Hello user9, Im user1 this is a test email sent from swaks!"
+
+swaks   --to user1@local.test   --from user8@local.test   --server 127.0.0.1:587   --auth LOGIN   --auth-user user2@local.test
+ --auth-password password123   --tls   --header "Subject: Test email from swaks"   --body "Hello user1, 1112 Im user1 this is a test email sent from swaks!"
+
+sudo -u vmail bash
+
+less 1752991655.M917635P6596.Admin-PC,S=717,W=737
+
+
+CREATE USER 'pma'@'localhost' IDENTIFIED BY '';
+GRANT USAGE ON mysql.* TO 'pma'@'localhost';
+
+
+
+su -s /bin/bash vmail
+cd /var/mail/vhosts
+
+docker exec -it mailserver bash
